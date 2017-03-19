@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		E78DCE701E7EF223005E0B93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78DCE6F1E7EF223005E0B93 /* AppDelegate.swift */; };
-		E78DCE721E7EF223005E0B93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78DCE711E7EF223005E0B93 /* ViewController.swift */; };
 		E78DCE751E7EF223005E0B93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E78DCE731E7EF223005E0B93 /* Main.storyboard */; };
 		E78DCE771E7EF223005E0B93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E78DCE761E7EF223005E0B93 /* Assets.xcassets */; };
 		E78DCE7A1E7EF223005E0B93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E78DCE781E7EF223005E0B93 /* LaunchScreen.storyboard */; };
+		E78DCE821E7EF2D9005E0B93 /* MessengerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78DCE811E7EF2D9005E0B93 /* MessengerTableViewController.swift */; };
+		E78DCE841E7EF384005E0B93 /* MyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78DCE831E7EF384005E0B93 /* MyImageView.swift */; };
+		E78DCE861E7EFFA2005E0B93 /* SendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78DCE851E7EFFA2005E0B93 /* SendTableViewCell.swift */; };
+		E78DCE881E7EFFB5005E0B93 /* GetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78DCE871E7EFFB5005E0B93 /* GetTableViewCell.swift */; };
+		E78DCE8A1E7F0A45005E0B93 /* MessagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78DCE891E7F0A45005E0B93 /* MessagerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E78DCE6C1E7EF223005E0B93 /* Messager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E78DCE6F1E7EF223005E0B93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E78DCE711E7EF223005E0B93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E78DCE741E7EF223005E0B93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E78DCE761E7EF223005E0B93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E78DCE791E7EF223005E0B93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E78DCE7B1E7EF223005E0B93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E78DCE811E7EF2D9005E0B93 /* MessengerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessengerTableViewController.swift; sourceTree = "<group>"; };
+		E78DCE831E7EF384005E0B93 /* MyImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyImageView.swift; sourceTree = "<group>"; };
+		E78DCE851E7EFFA2005E0B93 /* SendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendTableViewCell.swift; sourceTree = "<group>"; };
+		E78DCE871E7EFFB5005E0B93 /* GetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetTableViewCell.swift; sourceTree = "<group>"; };
+		E78DCE891E7F0A45005E0B93 /* MessagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +63,12 @@
 			isa = PBXGroup;
 			children = (
 				E78DCE6F1E7EF223005E0B93 /* AppDelegate.swift */,
-				E78DCE711E7EF223005E0B93 /* ViewController.swift */,
 				E78DCE731E7EF223005E0B93 /* Main.storyboard */,
+				E78DCE891E7F0A45005E0B93 /* MessagerViewController.swift */,
+				E78DCE851E7EFFA2005E0B93 /* SendTableViewCell.swift */,
+				E78DCE871E7EFFB5005E0B93 /* GetTableViewCell.swift */,
+				E78DCE831E7EF384005E0B93 /* MyImageView.swift */,
+				E78DCE811E7EF2D9005E0B93 /* MessengerTableViewController.swift */,
 				E78DCE761E7EF223005E0B93 /* Assets.xcassets */,
 				E78DCE781E7EF223005E0B93 /* LaunchScreen.storyboard */,
 				E78DCE7B1E7EF223005E0B93 /* Info.plist */,
@@ -137,8 +149,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E78DCE721E7EF223005E0B93 /* ViewController.swift in Sources */,
 				E78DCE701E7EF223005E0B93 /* AppDelegate.swift in Sources */,
+				E78DCE8A1E7F0A45005E0B93 /* MessagerViewController.swift in Sources */,
+				E78DCE821E7EF2D9005E0B93 /* MessengerTableViewController.swift in Sources */,
+				E78DCE841E7EF384005E0B93 /* MyImageView.swift in Sources */,
+				E78DCE881E7EFFB5005E0B93 /* GetTableViewCell.swift in Sources */,
+				E78DCE861E7EFFA2005E0B93 /* SendTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
