@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        FIRApp.configure()
+        
+        if let firebaseAuth = FIRAuth.auth(), let currentUser = firebaseAuth.currentUser  {
+            
+            
+            print(firebaseAuth)
+            print(currentUser.uid)
+            
+            
+            //+++++++ signing out ++++++++++++
+            do {
+                try firebaseAuth.signOut()
+            } catch let signOutError as NSError {
+                print ("Error signing out: %@", signOutError)
+            }
+            //--------------------------------
+            
+            
+        } else {
+        
+            let customToken = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIrMTIzNDU2Nzg5MDEiLCJpYXQiOjE0OTAwMTk3ODcsImV4cCI6MTQ5MDAyMzM4NywiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCJpc3MiOiJtZXNzYWdlcm52b3ZhcEBhcHBzcG90LmdzZXJ2aWNlYWNjb3VudC5jb20iLCJzdWIiOiJtZXNzYWdlcm52b3ZhcEBhcHBzcG90LmdzZXJ2aWNlYWNjb3VudC5jb20ifQ.aCrpGkLVMd0vdrxqmRc4RnLuxMaR3dimUf2PEVhvkSv1sq0Qgd0P0EEXsiv602-XljEyaS9HqcKlJXHJgG2CEqT-0YWgrP-QBrw16VRGpPLTMxkYAgPFttZ3B5odYlEtHHIUesmEAPFXVlDe_mRu3SXSH3H9pfv0f1YQpU0TTWrnlHBv95UbLkiAE2zlqfrrVgbGAgyIvTPvMTWOjd5JfEe6EUtXs3o1wZT3BJ1OibK5nhcrVe2FzC4fWHlDlJbm567zHbFzDyvxK8TcVanN7dM_NNUBo3tsEQ9dRbzERfTackdyIhbkxQoIjhSHpp2xwSejyjVVxbRDxLB0r5zfyg"
+            
+            
+            FIRAuth.auth()?.signIn(withCustomToken: customToken) { (user, error) in
+                print(error ?? "")
+                
+                print(user ?? "")
+                
+                print(user?.uid ?? "")
+                
+            }
+        }
+        
         return true
     }
 
